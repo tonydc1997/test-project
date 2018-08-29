@@ -7,6 +7,8 @@ dbMock = [
   'bossbaby.com'
 ];
 
-it('Testing... Testing... 1.. 2.. 3..', () => {
-  googleSearch('dummy-place-holder', dbMock);
+it('is Testing... Testing... 1.. 2.. 3..', () => {
+  expect('hello').toBe('hell no!');
 })
+
+
