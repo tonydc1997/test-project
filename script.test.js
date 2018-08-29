@@ -13,4 +13,5 @@ it('is Testing... Testing... 1.. 2.. 3..', () => {
 
 it('is testing googleSearch', () => {
   expect(googleSearch('placeholder text', dbMock)).toEqual([]);
+  expect(googleSearch('dog', dbMock)).toEqual(['dog.com']);
 })
