@@ -8,7 +8,9 @@ dbMock = [
 ];
 
 it('is Testing... Testing... 1.. 2.. 3..', () => {
-  expect('hello').toBe('hell no!');
+  expect('hello').toBe('hello');
 })
 
-
+it('is testing googleSearch', () => {
+  expect(googleSearch('placeholder text', dbMock)).toEqual([]);
+})
