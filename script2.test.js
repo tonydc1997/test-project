@@ -1,6 +1,15 @@
 const fetch = require('node-fetch');
 const swapi = require('./script2');
 
+/*  When testing asynchronous functions, be sure to include: 
+      ~ expect.assertions(x)
+        – This ensures that the test is actually working and not just passing it because it's a generic test.
+
+      ~ Either pass done() to the test (like in the 1st test) or 
+        return the fetch call (like in the 2nd test)
+        – This addresses the pending nature of async, which tells the test to wait until the pending process is complete.
+*/
+
 it('calls swapi to get people', (done) => {
   expect.assertions(1);
   swapi.getPeople(fetch).then(data => {
@@ -14,3 +23,5 @@ it('calls swapi to get people, via a promise', () => {
     expect(data.count).toEqual(87);
   })
 })
+
+
