@@ -26,4 +26,8 @@ it('calls swapi to get people, via a promise', () => {
   })
 })
 
+it('getPeople returns count and results', () => {
+  
+})
+
 
