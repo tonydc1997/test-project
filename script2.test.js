@@ -26,7 +26,8 @@ it('calls swapi to get people, via a promise', () => {
   })
 })
 
-
+/* When using API, server, or DB calls, it would be best to create mocks (spies in Jest) of said features so as to speed up testing process and not waste valuable resources.
+*/
 
 it('getPeople returns count and results', () => {
   const mockFetch = jest.fn().mockReturnValue(Promise.resolve({
