@@ -6,3 +6,9 @@ it('calls swapi to get people', () => {
     expect(data.count).toEqual(87);
   })
 })
+
+it('calls swapi to get people, via a promise', () => {
+  swapi.getPeoplePromise(fetch).then(data => {
+    expect(data.count).toEqual(87);
+  })
+})
