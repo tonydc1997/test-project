@@ -27,7 +27,12 @@ it('calls swapi to get people, via a promise', () => {
 })
 
 it('getPeople returns count and results', () => {
-  
+  const mockFetch = jest.fn().mockReturnValue(Promise.resolve({
+    json: () => Promise.resolve({
+      count: 87,
+      results: [0,1,2,3,4,5]
+    })
+  }))
 })
 
 
