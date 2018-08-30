@@ -33,6 +33,9 @@ it('getPeople returns count and results', () => {
       results: [0,1,2,3,4,5]
     })
   }))
+  return swapi.getPeoplePromise(mockFetch).then(data => {
+    
+  });
 })
 
 
